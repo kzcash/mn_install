@@ -32,8 +32,8 @@ MN_EXTERNAL_IP=`curl -s -4 ifconfig.co`
 sudo useradd -U -m kzcash -s /bin/bash
 echo "kzcash:${KZC_DAEMON_USER_PASS}" | sudo chpasswd
 sudo wget https://github.com/GabitJunior/kzcash/releases/tag/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
-sudo tar -xzvf /home/kzcash/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz -C /home/kzcash/
-#sudo rm /home/kzcash/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
+sudo tar -xzvf /root/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz -C /home/kzcash/
+#sudo rm /root/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
 sudo mkdir /home/kzcash/.kzcash/
 sudo chown -R kzcash:kzcash /home/kzcash/kzcash*
 sudo chmod 755 /home/kzcash/kzcash*
