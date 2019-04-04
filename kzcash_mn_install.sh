@@ -31,7 +31,7 @@ MN_EXTERNAL_IP=`curl -s -4 ifconfig.co`
 
 sudo useradd -U -m kzcash -s /bin/bash
 echo "kzcash:${KZC_DAEMON_USER_PASS}" | sudo chpasswd
-sudo wget https://github.com/kzcashteam/ucom/releases/download/v0.1.9.1/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz --directory-prefix /home/kzcash/
+sudo wget https://github.com/GabitJunior/kzcash/releases/download/v0.1.9.1/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz --directory-prefix /home/kzcash/
 sudo tar -xzvf /home/kzcash/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz -C /home/kzcash/
 sudo rm /home/kzcash/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
 sudo mkdir /home/kzcash/.kzcash/
@@ -73,7 +73,7 @@ echo -e "masternode=1\nmasternodeprivkey=${MNGENKEY}\nexternalip=${MN_EXTERNAL_I
 sudo systemctl restart kzcash
 
 echo "Installing sentinel engine"
-sudo git clone https://github.com/kzcashteam/sentinel.git /home/kzcash/sentinel/
+sudo git clone https://github.com/GabitJunior/sentinel.git /home/kzcash/sentinel/
 sudo mkdir /home/kzcash/sentinel/database/
 sudo chown -R kzcash:kzcash /home/kzcash/sentinel/
 cd /home/kzcash/sentinel/
