@@ -39,7 +39,7 @@ sudo tar -xzvf kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz -C /home/kzcash/
 sudo mkdir /home/kzcash/.kzcash/
 sudo chown -R kzcash:kzcash /home/kzcash/kzcash*
 sudo chmod 755 /home/kzcash/kzcash*
-echo -e "rpcuser=kzcashrpc\nrpcpassword=${KZC_DAEMON_RPC_PASS}\nlisten=1\nserver=1\nrpcallowip=127.0.0.1\nmaxconnections=256\nprinttodebuglog=0" \n\naddnode=161.97.65.233\naddnode=164.68.124.246| sudo tee /home/kzcash/.kzcash/kzcash.conf
+echo -e "rpcuser=kzcashrpc\nrpcpassword=${KZC_DAEMON_RPC_PASS}\nlisten=1\nserver=1\nrpcallowip=127.0.0.1\nmaxconnections=256\nprinttodebuglog=0 \n\naddnode=161.97.65.233\naddnode=164.68.124.246" | sudo tee /home/kzcash/.kzcash/kzcash.conf
 sudo chown -R kzcash:kzcash /home/kzcash/.kzcash/
 sudo chmod 500 /home/kzcash/.kzcash/kzcash.conf
 
