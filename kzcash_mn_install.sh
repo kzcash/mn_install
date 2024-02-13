@@ -73,7 +73,7 @@ sleep 100
 
 MNGENKEY=`sudo -H -u kzcash /home/kzcash/kzcash-cli masternode genkey`
 echo -e "masternode=1\nmasternodeprivkey=${MNGENKEY}\nexternalip=${MN_EXTERNAL_IP}:8277" | sudo tee -a /home/kzcash/.kzcash/kzcash.conf
-echo -e '\n\naddnode=202.182.113.198:8277\naddnode=199.247.16.100:8277\naddnode=45.63.114.143:8277\naddnode=45.63.42.3:8277\naddnode=161.97.65.233:8277\naddnode=164.68.124.246:8277' | tee -a /home/kzcash/.kzcash/kzcash.conf
+echo -e '\n\naddnode=161.97.65.233:8277\naddnode=207.180.249.251:8277\naddnode=51.120.7.86:8277\naddnode=40.82.155.92:8277' | tee -a /home/kzcash/.kzcash/kzcash.conf
 sudo systemctl restart kzcash
 
 echo "Installing sentinel engine"
