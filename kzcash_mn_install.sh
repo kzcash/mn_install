@@ -34,7 +34,7 @@ MN_EXTERNAL_IP=`curl ifconfig.me`
 
 sudo useradd -U -m kzcash -s /bin/bash
 echo "kzcash:${KZC_DAEMON_USER_PASS}" | sudo chpasswd
-sudo wget https://github.com/GabitJunior/kzc_mn_install/raw/master/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
+sudo wget https://github.com/kzcash/mn_install/blob/master/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
 sudo tar -xzvf kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz -C /home/kzcash/
 #sudo rm /root/kzcash-0.1.9.1-cli-linux-ubuntu1604.tar.gz
 sudo mkdir /home/kzcash/.kzcash/
@@ -73,11 +73,11 @@ sleep 100
 
 MNGENKEY=`sudo -H -u kzcash /home/kzcash/kzcash-cli masternode genkey`
 echo -e "masternode=1\nmasternodeprivkey=${MNGENKEY}\nexternalip=${MN_EXTERNAL_IP}:8277" | sudo tee -a /home/kzcash/.kzcash/kzcash.conf
-echo -e '\n\naddnode=161.97.65.233:8277\naddnode=207.180.249.251:8277\naddnode=51.120.7.86:8277\naddnode=40.82.155.92:8277' | tee -a /home/kzcash/.kzcash/kzcash.conf
+echo -e '\n\naddnode=161.97.65.233:8277\naddnode=154.26.159.218:8277\naddnode=51.120.7.86:8277\naddnode=167.86.83.90:8277' | tee -a /home/kzcash/.kzcash/kzcash.conf
 sudo systemctl restart kzcash
 
 echo "Installing sentinel engine"
-sudo git clone https://github.com/GabitJunior/sentinel.git /home/kzcash/sentinel/
+sudo git clone https://github.com/kzcash/sentinel.git /home/kzcash/sentinel/
 sudo mkdir /home/kzcash/sentinel/database/
 sudo chown -R kzcash:kzcash /home/kzcash/sentinel/
 cd /home/kzcash/sentinel/
